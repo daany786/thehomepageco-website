@@ -22,7 +22,6 @@ import {
 } from "lucide-react";
 import { SiteBackground } from "@/components/SiteBackground";
 import { useReveal } from "@/hooks/use-reveal";
-import logoAsset from "@/assets/thehomepageco-logo.png.asset.json";
 import heroOrb from "@/assets/hero-orb.jpg";
 import caseEcom from "@/assets/case-ecom.jpg";
 import caseSaas from "@/assets/case-saas.jpg";
@@ -41,7 +40,8 @@ const workMaison = workMaisonAsset.url;
 const workHeritage = workHeritageAsset.url;
 const workMarlow = workMarlowAsset.url;
 
-const SITE_URL = "https://cosmic-fusion-agency.lovable.app";
+const SITE_URL = "https://thehomepageco-website.vercel.app";
+const LOGO_URL = "/thehomepageco-logo.png";
 const BRAND = "thehomepageco";
 
 export const Route = createFileRoute("/")({
@@ -58,7 +58,7 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "We help brands grow with websites, software, ecommerce, branding and marketing that actually convert." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },
-      { property: "og:image", content: SITE_URL + logoAsset.url },
+      { property: "og:image", content: SITE_URL + LOGO_URL },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "thehomepageco — Digital Agency" },
       { name: "twitter:description", content: "Websites, software and marketing that drive measurable growth." },
@@ -72,7 +72,7 @@ export const Route = createFileRoute("/")({
           "@type": "ProfessionalService",
           name: BRAND,
           url: SITE_URL,
-          logo: SITE_URL + logoAsset.url,
+          logo: SITE_URL + LOGO_URL,
           description:
             "Digital agency offering web development, ecommerce, software, branding, social media management and performance marketing.",
           areaServed: "Worldwide",
@@ -123,12 +123,11 @@ function Landing() {
 function BrandLogo({ className = "h-9 w-9" }: { className?: string }) {
   return (
     <img
-      src={logoAsset.url}
+      src={LOGO_URL}
       alt="thehomepageco logo"
       width={64}
       height={64}
       className={className}
-      style={{ filter: "drop-shadow(0 0 12px rgba(55,51,255,0.55))" }}
     />
   );
 }
