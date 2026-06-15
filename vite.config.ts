@@ -12,4 +12,6 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Required for self-hosted deploys (Vercel, Netlify, etc.) outside Lovable's sandbox.
+  nitro: { preset: "vercel" },
 });
