@@ -29,16 +29,12 @@ import caseBrand from "@/assets/case-brand.jpg";
 import client1 from "@/assets/client-1.jpg";
 import client2 from "@/assets/client-2.jpg";
 import client3 from "@/assets/client-3.jpg";
-import workNorthfieldAsset from "@/assets/work-northfield.jpg.asset.json";
-import workBluepeakAsset from "@/assets/work-bluepeak.jpg.asset.json";
-import workMaisonAsset from "@/assets/work-maison.jpg.asset.json";
-import workHeritageAsset from "@/assets/work-heritage.jpg.asset.json";
-import workMarlowAsset from "@/assets/work-marlow.jpg.asset.json";
-const workNorthfield = workNorthfieldAsset.url;
-const workBluepeak = workBluepeakAsset.url;
-const workMaison = workMaisonAsset.url;
-const workHeritage = workHeritageAsset.url;
-const workMarlow = workMarlowAsset.url;
+
+const portfolioPadelPit = "/portfolio/padel-pit.jpeg";
+const portfolioPlan5ive = "/portfolio/plan5ive.jpeg";
+const portfolioPaisleyPeacock = "/portfolio/paisley-peacock.jpeg";
+const portfolioRamay = "/portfolio/ramay-constructions.jpeg";
+const portfolioInnovativePackaging = "/portfolio/innovative-packaging.jpeg";
 
 const SITE_URL = "https://thehomepageco-website.vercel.app";
 const LOGO_URL = "/thehomepageco-logo.png";
@@ -501,12 +497,12 @@ function Services() {
 /* ============== PORTFOLIO ============== */
 function Portfolio() {
   const projects = [
-    { title: "Padel Pit.", cat: "Booking System", desc: "Seamless booking experience designed for efficiency, convenience, and business growth", img: workNorthfield, span: true },
-    { title: "Plan5ive", cat: "Website", desc: "Modern architectural presence crafted to showcase expertise and inspire confidence.", img: workBluepeak, span: false },
-    { title: "Paisley & Peacock", cat: "Brand identity", desc: "Strategic brand identity designed for recognition, consistency, and impact.\n", img: workMaison, span: false },
-    { title: "Ramay Constructions", cat: "Website + SEO", desc: "High-performing website and SEO strategy built to drive visibility and leads.\n", img: workHeritage, span: false },
+    { title: "Padel Pit.", cat: "Booking System", desc: "Seamless booking experience designed for efficiency, convenience, and business growth", img: portfolioPadelPit, span: true },
+    { title: "Plan5ive", cat: "Website", desc: "Modern architectural presence crafted to showcase expertise and inspire confidence.", img: portfolioPlan5ive, span: false },
+    { title: "Paisley & Peacock", cat: "Brand identity", desc: "Strategic brand identity designed for recognition, consistency, and impact.\n", img: portfolioPaisleyPeacock, span: false },
+    { title: "Ramay Constructions", cat: "Website + SEO", desc: "High-performing website and SEO strategy built to drive visibility and leads.\n", img: portfolioRamay, span: false },
     { title: "Little Dreams Pakistan", cat: "Performance marketing", desc: "Results-focused marketing campaigns optimized for growth and conversions.", img: caseSaas, span: false },
-    { title: "The Innovative Packaging", cat: "Brand + Website", desc: "Unified branding and website experience crafted to elevate industry presence.", img: workMarlow, span: true },
+    { title: "The Innovative Packaging", cat: "Brand + Website", desc: "Unified branding and website experience crafted to elevate industry presence.", img: portfolioInnovativePackaging, span: true },
   ];
   return (
     <section id="portfolio" className="relative py-20 sm:py-28">
